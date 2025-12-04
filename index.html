@@ -3,12 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
+  <title>Benjamin Böhlke - Illustrator</title>
   <link href='/style.css' rel='stylesheet'>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+  <!DOCTYPE html>
+  <html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Galerie</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header><h1>Benjamin Böhlke</h1>
+      <h2>Illustrator</h2>
+    </header>
+  
+  <section class="gallery">
+    <div class="gallery-item">
+      <img data-src="assets/Morast.JPG" alt="Bild 1" class="lazy">
+      <h3>Morast</h3>
+      <h4>Pastel on Paper, 2025</h4>
+    </div>
+    <div class="gallery-item">
+      <img data-src="assets/Maske.JPG" alt="Bild 2" class="lazy">
+      <h3>Maske</h3>
+      <h4>Pastel on Paper, 2025</h4>
+    </div>
+    <div class="gallery-item">
+      <img data-src="assets/Selbstbildnis.JPG" alt="Bild 3" class="lazy">
+      <h3>Selbstbildnis mit Mütze und Schal</h3>
+      <h4>Pastel on Paper, 2025</h4>
+    </div>
+    <div class="gallery-item">
+      <img data-src="assets/Wurzel.JPG" alt="Bild 4" class="lazy">
+      <h3>Wurzel</h3>
+      <h4>Pastel on Paper, 2025</h4>
+    </div>
+
+  </section>
+  
+  <script src="lazyload.js"></script>
+  </body>
+  </html>
+  
 </body>
 </html>

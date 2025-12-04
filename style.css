@@ -1,1 +1,81 @@
-/* Add styles here */
+/* Basis Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #ffffff;
+  color:rgb(39, 39, 39);
+}
+
+header {
+  padding: 2rem;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+/* Galerie-Container */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem; /* Abstand zwischen Bildern */
+  padding: 10px;
+  justify-content: center;
+}
+
+/* Galerie-Items */
+.gallery-item {
+  flex: 1 1 calc(33.333% - 10px); /* 4 Spalten, Abstand abziehen */
+  overflow: hidden;
+  min-width: 200px; /* verhindert zu kleine Items auf sehr schmalen Bildschirmen */
+  max-width: 30%;
+}
+
+h3, h1 {
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: normal;
+}
+h4, h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Bilder */
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0; /* wird durch lazyload später sichtbar */
+  border-radius: 6px; /* optional: leicht abgerundete Ecken */
+  margin-bottom: 1rem;
+}
+
+/* Lazyload-Fade-In */
+.gallery-item img.loaded {
+  opacity: 1;
+}
+
+
+
+/* Responsive Breakpoints */
+
+/* Tablet: 2 Spalten */
+@media (max-width: 900px) {
+  .gallery-item {
+    flex: 1 1 calc(50% - 10px);
+  }
+}
+
+/* Smartphone: 1 Spalte */
+@media (max-width: 600px) {
+  .gallery-item {
+    flex: 1 1 100%;
+  }
+}
