@@ -18,6 +18,32 @@ header {
   text-align: center; 
 }
 
+section {
+  margin-bottom: 100px;
+}
+
+.responsive-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 Spalten */
+  gap: 20px;
+  max-width: 75%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  align-items: center; /* vertikal zentrieren */
+  /* optional horizontal */
+  justify-content: center;
+}
+
+.column {
+  border-radius: 8px;
+
+}
+
+.column > img {
+  width: 100%;
+}
+
+
 /* Galerie-Container */
 .gallery {
   display: flex;
@@ -35,15 +61,24 @@ header {
   max-width: 30%;
 }
 
-h3, h1 {
+p {
+  font-size: 0.75rem;
+}
+
+h4 {
   font-size: 0.75rem;
   font-weight: 700;
   font-style: normal;
 }
-h4, h2 {
+h5, h2 {
   font-size: 0.75rem;
   font-weight: 400;
   font-style: normal;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Bilder */
@@ -53,7 +88,6 @@ h4, h2 {
   display: block;
   transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 0; /* wird durch lazyload später sichtbar */
-  border-radius: 6px; /* optional: leicht abgerundete Ecken */
   margin-bottom: 1rem;
 }
 
@@ -123,5 +157,10 @@ footer {
     flex: 1 1 100%;
     max-width: 80%;
   }
+
+  .responsive-container {
+    grid-template-columns: 1fr; /* 1 Spalte */
+  }
+
 
 }
