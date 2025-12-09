@@ -62,6 +62,50 @@ h4, h2 {
   opacity: 1;
 }
 
+.btn {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  background-color: #000;        /* schwarzer Hintergrund */
+  color: #fff;                   /* weiße Schrift */
+  padding: 0.5rem;            /* Innenabstand */
+  font-size: 0.75rem;               /* Schriftgröße */
+  border: none;                  /* kein Rahmen */
+  cursor: pointer;               /* Mauscursor auf Pointer */
+  transition: all 0.3s ease;     /* sanfter Übergang für Hover */
+  margin-top: 0.5rem;
+  min-width: 50px;
+}
+
+/* Hover-Effekt */
+.btn:hover {
+  background-color: #2f00ff;        /* etwas helleres Schwarz beim Hover */
+}
+
+.btn:disabled {
+  background-color: #ccc;       /* graues Design */
+  color: #555;                   /* helle Schrift für Kontrast */
+  cursor: not-allowed;           /* Zeiger zeigt, dass Klick nicht möglich ist */
+  transform: none;               /* keine Hover-Transformation */
+  box-shadow: none;              /* kein Schatten */
+  opacity: 0.7;                  /* leicht transparent */
+}
+
+footer {
+  position: fixed;          /* fixiert am Bildschirm */
+  bottom: 0;                /* ganz unten */
+  left: 0;
+  width: 100%;              /* volle Breite */
+  background-color: #fff;   /* weißer Hintergrund */
+  padding: 15px 20px;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1); /* leichter Schatten nach oben */
+  display: flex;
+  justify-content: center;  /* Inhalt zentrieren */
+  align-items: center;
+  z-index: 1000;            /* immer oben */
+  font-size: 0.75rem;
+  text-align: center;
+}
+
 
 
 /* Responsive Breakpoints */
@@ -77,5 +121,7 @@ h4, h2 {
 @media (max-width: 600px) {
   .gallery-item {
     flex: 1 1 100%;
+    max-width: 80%;
   }
+
 }
