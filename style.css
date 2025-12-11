@@ -12,25 +12,35 @@ body {
 }
 
 header {
-  padding: 2rem;
+  padding: 1rem;
   width: 100%;
   background-color: rgb(255, 255, 255);
-  text-align: center; 
+  text-align: right;
 }
 
 section {
   margin-bottom: 100px;
 }
 
-.responsive-container {
+.container-50-50 {
   display: grid;
   grid-template-columns: 1fr 1fr; /* 2 Spalten */
   gap: 20px;
   max-width: 75%;
   margin: 0 auto;
   margin-bottom: 100px;
-  align-items: center; /* vertikal zentrieren */
-  /* optional horizontal */
+  align-items: center; 
+  justify-content: center;
+}
+
+.container-30-30-30 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 2 Spalten */
+  gap: 20px;
+  max-width: 75%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  align-items: center; 
   justify-content: center;
 }
 
@@ -39,9 +49,18 @@ section {
 
 }
 
-.column > img {
+.fullwidth {
   width: 100%;
 }
+
+.center {
+  text-align: center;
+}
+
+.mb {
+  margin-bottom: 1rem;
+}
+
 
 
 /* Galerie-Container */
@@ -62,7 +81,14 @@ section {
 }
 
 p {
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+
+blockquote {
+  color: #949494;
   font-size: 0.75rem;
+  margin: 0.5rem;
 }
 
 h4 {
@@ -70,15 +96,24 @@ h4 {
   font-weight: 700;
   font-style: normal;
 }
-h5, h2 {
+h5 {
   font-size: 0.75rem;
   font-weight: 400;
   font-style: normal;
 }
 
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: normal;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 h1 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  font-weight: 700;
 }
 
 /* Bilder */
@@ -130,8 +165,8 @@ footer {
   left: 0;
   width: 100%;              /* volle Breite */
   background-color: #fff;   /* weißer Hintergrund */
-  padding: 15px 20px;
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.1); /* leichter Schatten nach oben */
+  padding: 0.5rem;
+
   display: flex;
   justify-content: center;  /* Inhalt zentrieren */
   align-items: center;
@@ -158,7 +193,11 @@ footer {
     max-width: 80%;
   }
 
-  .responsive-container {
+  .container-50-50 {
+    grid-template-columns: 1fr; /* 1 Spalte */
+  }
+
+  .container-30-30-30 {
     grid-template-columns: 1fr; /* 1 Spalte */
   }
 
